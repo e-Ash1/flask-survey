@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... -->
+    <title>Question {{ qid + 1 }}</title>
+</head>
+<body>
+    <!--Form to connect URL endpoint-->
+    <form action="/answer" method="post">
+        <fieldset>
+            <legend>{{ question.question }}</legend>
+            {% for choice in question.choices %}
+                <label>
+                    <input type="radio" name="answer" value="{{ choice }}">{{ choice }}
+                </label><br>
+            {% endfor %}
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ survey_title }}</title> <!-- Dynamic title -->
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Take part in our survey and share your thoughts!" />
+</head>
+
+<body>
+  <h1>{{ survey_title }}</h1> <!-- Displaying the survey title -->
+  <p>{{ survey_instructions }}</p> <!-- Displaying the survey instructions -->
+
+  <!-- Button to start the survey -->
+  <form action="/questions/0" method="get">
+    <button type="submit">Start Survey</button>
+  </form>
+</body>
+</html>
